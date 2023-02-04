@@ -2,7 +2,7 @@ export interface IUserRequest {
     name: string
     password: string
     email: string
-    telephone: number
+    telephone: string
 }
 
 export interface IUserLogin{
@@ -14,5 +14,5 @@ export interface IUserUpdate{
     name?: string
     password?: string
     email?: string
-    telephone?: number
+    telephone?: string
 }
