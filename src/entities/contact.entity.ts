@@ -16,7 +16,7 @@ export class Contact {
     email: string;
 
     @Column()
-    telephone: number;
+    telephone: string;
 
     @Column({ default: true })
     isActive: boolean;
@@ -27,6 +27,6 @@ export class Contact {
     @UpdateDateColumn()
     updatedAt: Date;
 
-    @ManyToOne(() => User, (user) => user.contact)
+    @ManyToOne(() => User, (user) => user.contacts)
     user: User;
 }

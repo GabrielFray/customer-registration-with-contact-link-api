@@ -15,8 +15,8 @@ export class User {
     @Column({ unique: true })
     email: string;
 
-    @Column({ length: 14 })
-    telephone: number;
+    @Column()
+    telephone: string;
 
     @Column({ default: true })
     isActive: boolean;
@@ -28,6 +28,5 @@ export class User {
     updatedAt: Date;
 
     @OneToMany(() => Contact, (contact) => contact.user)
-    contact: Contact[]
-
+    contacts: Contact[]
 }
