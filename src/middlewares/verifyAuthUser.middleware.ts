@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from "express"
 import jwt from "jsonwebtoken"
 import { AppError } from "../errors/appError"
+import { Request, Response, NextFunction } from "express"
 
 export const verifyAuthUserMiddleware = (
     req: Request,
@@ -18,7 +18,7 @@ export const verifyAuthUserMiddleware = (
                     throw new AppError("Invalid token", 401);
                 }
 
-                req.user = { id: decoded.sub };
+                req.user = { id: decoded.id };
 
                 next();
             }
