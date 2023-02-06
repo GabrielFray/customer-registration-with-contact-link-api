@@ -11,9 +11,9 @@ export const updateUserController = async (req: Request, res: Response) => {
             message: "Data entered cannot be updated",
         })
     }
-    const updateUser = await updateUserService(user, id)
+    await updateUserService(user, id)
 
-    return res.json(updateUser)
+    return res.status(200).json({ message: "Successfully update" });
 }
 
 
