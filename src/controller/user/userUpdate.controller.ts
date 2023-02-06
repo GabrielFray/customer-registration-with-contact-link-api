@@ -2,16 +2,11 @@ import { Request, Response } from "express"
 import { updateUserService } from "../../services/user/updateUser.service"
 
 export const updateUserController = async (req: Request, res: Response) => {
-    const user = req.body
+    const { name, email, password, telephone } = req.body
 
-    const { id } = req.params
+    const { id } = req.user
 
-    if ("id" in user || "isActive" in user) {
-        return res.status(401).json({
-            message: "Data entered cannot be updated",
-        })
-    }
-    await updateUserService(user, id)
+    await updateUserService({ name, email, password, telephone }, id)
 
     return res.status(200).json({ message: "Successfully update" });
 }
