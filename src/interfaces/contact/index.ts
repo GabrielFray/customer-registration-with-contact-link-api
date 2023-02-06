@@ -1,5 +1,3 @@
-import { IUserRequest } from "../user"
-
 export interface IContactRequest {
     name: string
     email: string
