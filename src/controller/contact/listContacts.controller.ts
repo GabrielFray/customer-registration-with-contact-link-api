@@ -7,7 +7,7 @@ export const listContactsController = async (
 ) => {
     const { id } = req.user
 
-    const properties = await listContactService(id)
+    const contacts = await listContactService(id)
 
-    return res.status(200).json(properties)
+    return res.status(200).json(contacts)
 }
