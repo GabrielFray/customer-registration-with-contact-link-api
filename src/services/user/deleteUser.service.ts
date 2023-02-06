@@ -8,7 +8,7 @@ export const deleteUserService = async (id: string) => {
     const findUser = await userRepository.findOneBy({ id })
 
     if (findUser!.isActive === false) {
-        throw new AppError("User has already been deleted or does not exist", 400)
+        throw new AppError("User has already been deleted or does not exist", 404)
     }
 
     userRepository.update(findUser!.id, { isActive: false })
