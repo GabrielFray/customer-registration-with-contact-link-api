@@ -9,17 +9,11 @@ export class Contact {
     @Column()
     name: string;
 
-    @Column({ select: false })
-    password: string;
-
     @Column({ unique: true })
     email: string;
 
     @Column()
     telephone: string;
-
-    @Column({ default: true })
-    isActive: boolean;
 
     @CreateDateColumn()
     createdAt: Date;
