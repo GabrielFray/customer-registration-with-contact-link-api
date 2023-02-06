@@ -1,6 +1,6 @@
-import { Router } from "express";
+import { Router } from "express"
 
-import { sessionUserController } from "../controller/session/sessionUser.controller";
+import { sessionUserController } from "../controller/session/sessionUser.controller"
 
 const routes = Router()
 

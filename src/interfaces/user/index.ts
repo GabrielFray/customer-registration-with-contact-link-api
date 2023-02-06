@@ -5,12 +5,12 @@ export interface IUserRequest {
     telephone: string
 }
 
-export interface IUserLogin{
+export interface IUserLogin {
     email: string
     password: string
 }
 
-export interface IUserUpdate{
+export interface IUserUpdate {
     name?: string
     password?: string
     email?: string
