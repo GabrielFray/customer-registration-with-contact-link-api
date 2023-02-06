@@ -2,14 +2,14 @@ import * as yup from "yup";
 import { IUserRequest, IUserUpdate } from "../../interfaces/user";
 
 
-export const userCreate: yup.SchemaOf<IUserRequest> = yup.object().shape({
+export const createSchema: yup.SchemaOf<IUserRequest> = yup.object().shape({
     name: yup.string().required(),
     password: yup.string().required(),
     email: yup.string().email().required(),
     telephone: yup.string().required()
 });
 
-export const userUpdate: yup.SchemaOf<IUserUpdate> = yup.object().shape(
+export const updateSchema: yup.SchemaOf<IUserUpdate> = yup.object().shape(
     {
         email: yup
             .string()
@@ -47,17 +47,7 @@ export const userUpdate: yup.SchemaOf<IUserUpdate> = yup.object().shape(
             then: (schema) => schema.notRequired(),
             otherwise: (schema) => schema.required(),
         }),
-        telephone: yup.string().when(["email", "name"], {
-            is: (email: string, name: string) => {
-                if (email || name) {
-                    return true;
-                } else {
-                    return false;
-                }
-            },
-            then: (schema) => schema.notRequired(),
-            otherwise: (schema) => schema.required(),
-        }),
+        telephone: yup.string()
     },
     [
         ["name", "password"],
