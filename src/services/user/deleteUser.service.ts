@@ -5,16 +5,13 @@ import { AppError } from "../../errors/appError"
 export const deleteUserService = async (id: string) => {
     const userRepository = AppDataSource.getRepository(User)
 
-    const findUser = await userRepository.findOneBy({ id: id })
+    const findUser = await userRepository.findOneBy({ id })
 
-    if (!findUser) {
-        throw new AppError("User is not found", 404)
+    if (findUser!.isActive === false) {
+        throw new AppError("User has already been deleted or does not exist", 400)
     }
 
-    if (!findUser!.isActive) {
-        throw new AppError("User has already been deleted", 403)
-    }
-    await userRepository.update(id, { isActive: false })
+    userRepository.update(findUser!.id, { isActive: false })
 
     return true
 }
