@@ -1,5 +1,5 @@
 
-# Vibefy documentation API
+# Customer registration with contact link API
 
 ## Tabela de Conteúdos
 
