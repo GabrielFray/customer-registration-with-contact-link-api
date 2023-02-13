@@ -51,7 +51,6 @@ Visão Geral das tecnologias usadas no projeto.
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [cross-env](https://www.npmjs.com/package/cross-env)
 
----
 <a align="left" name="techs"></a>
 
 ---
@@ -84,7 +83,7 @@ query: SELECT version();
 Servidor executando.
 ```
 
-## 4.3 - Caso opite por usar o docker, terá que mudar no ```DATABASE_URL``` a variável ```localhost``` para ```db```.
+### 4.3 - Caso opite por usar o docker, terá que mudar no ```DATABASE_URL``` a variável ```localhost``` para ```db```.
 
 ```
 SECRET_KEY=chave secreta definida pelo seu time de desenvolvimento
@@ -92,7 +91,13 @@ DATABASE_URL="postgres://user:password@db:5432/postgres_db"
 ```
 4.3.1 - Então rode o comando ```docker-compose up``` para gerar um container no docker.
 
-
+```
+Starting myapp_db_1  ... done
+Starting myapp_web_1 ... done
+Attaching to myapp_db_1, myapp_web_1
+db_1   | 2021-02-13T08:15:12.651533Z 0 [Note] mysqld (mysqld 10.3.22-MariaDB-1:10.3.22+maria~bionic) starting as process 1 ...
+web_1  | Listening on 5000...
+```
 
 <a name="devs"></a>
 
