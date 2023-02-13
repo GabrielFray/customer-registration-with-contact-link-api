@@ -69,10 +69,9 @@ Visão Geral das tecnologias usadas no projeto.
 4.2.2 - Após o clone no repositório para adicionar todas as dependências do package json execute o comando: 
 `yarn install` 
 
-4.2.3 - Crie um arquivo na raiz do projeto chamado .env e faça as configurações das variáveis de ambiente com base no .env.example do projeto
+4.2.3 - Crie um arquivo na raiz do projeto chamado .env e faça as configurações das variáveis de ambiente com base no .env.example do projeto.
 ```
 SECRET_KEY=chave secreta definida pelo seu time de desenvolvimento
-DATABASE_URL="postgres://gabriel_fray:7355@127.0.0.1:5432/customer_registration"
 DATABASE_URL="postgres://user:password@localhost:5432/postgres_db"  
 ```
 4.2.4 - Para rodar projeto utilize o comando `yarn dev` no terminal, caso de tudo certo receberá uma mensagem parecida com essa:
@@ -84,6 +83,16 @@ query: CREATE EXTENSION IF NOT EXISTS "uuid-ossp"
 query: SELECT version();
 Servidor executando.
 ```
+
+## 4.3 - Caso opite por usar o docker, terá que mudar no ```DATABASE_URL``` a variável ```localhost``` para ```db```.
+
+```
+SECRET_KEY=chave secreta definida pelo seu time de desenvolvimento
+DATABASE_URL="postgres://user:password@db:5432/postgres_db"  
+```
+4.3.1 - Então rode o comando ```docker-compose up``` para gerar um container no docker.
+
+
 
 <a name="devs"></a>
 
