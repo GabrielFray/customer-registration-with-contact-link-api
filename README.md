@@ -64,7 +64,7 @@ Visão Geral das tecnologias usadas no projeto.
 - Banco de dados PostgreSQL
 
 ### 4.2 Instalação
-4.2.1 - Crie um banco de dados chamado vibe_database no PostgreSQL
+4.2.1 - Crie um banco de dados chamado customer_registration no PostgreSQL
 4.2.2 - Após o clone no repositório para adicionar todas as dependências do package json execute o comando: 
 `yarn install` 
 
