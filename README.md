@@ -24,6 +24,7 @@
 ## 2. Links relevantes
 
 - <a name="deploy-da-aplicação" href ="https://customer-registration-api.onrender.com" target="_blank">Link da aplicação</a>
+- <a name="google-drive-link" href ="https://drive.google.com/drive/folders/1UKmzh-JDAgtpFENhQl69JBob7FHVsBpG?usp=share_link" target="_blank">Link das rotas no insomnia para teste</a>
 
 ## Diagrama ER da API definindo bem as relações entre as tabelas do banco de dados.
 
