@@ -89,7 +89,7 @@ Servidor executando.
 SECRET_KEY=chave secreta definida pelo seu time de desenvolvimento
 DATABASE_URL="postgres://user:password@db:5432/postgres_db"  
 ```
-4.3.1 - Então rode o comando ```docker-compose up``` para gerar um container no docker.
+4.3.1 - Então rode o comando ```docker-compose up``` para gerar um container no docker, caso de tudo certo, você receberá uma mensagem parecida com essa:
 
 ```
 Starting myapp_db_1  ... done
